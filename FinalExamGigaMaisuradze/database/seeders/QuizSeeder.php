@@ -7,15 +7,13 @@ class QuizSeeder extends Seeder
 {
     public function run()
     {
-        // Create a quiz
         $quiz = Quiz::create([
-            'name' => 'My Quiz',
-            'picture' => 'https://example.com/quiz.jpg',
-            'description' => 'This is my quiz!',
+            'name' => 'Quiz about Geography',
+            'picture' => 'https://img.freepik.com/premium-vector/quiz-comic-pop-art-style_175838-505.jpg?w=2000',
+            'description' => 'This is quiz bout my fav subject in school',
             'author_id' => 1,
         ]);
 
-        // Create some questions for the quiz
         $quiz->questions()->createMany([
             [
                 'question' => 'With which country Spain doesnt share border?',

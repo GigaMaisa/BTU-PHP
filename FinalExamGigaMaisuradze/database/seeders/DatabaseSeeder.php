@@ -20,8 +20,6 @@ class DatabaseSeeder extends Seeder
         'password' => bcrypt('admin'),
     ]);
 
-
-        // Create a quiz
         $quiz = Quiz::create([
             'name' => 'Geography knowledge quiz',
             'picture' => 'https://parade.com/.image/t_share/MTkwNTgwODk4NzA0NDAyMzAw/easy-geography-trivia-questions.jpg',
@@ -30,7 +28,6 @@ class DatabaseSeeder extends Seeder
             'author_id' => 1,
         ]);
 
-        // Create some questions for the quiz
         $quiz->questions()->createMany([
             [
                 'question' => 'With which country Spain doesnt share border?',
